@@ -15,7 +15,7 @@ header {
 .container {
   max-width: 1380px;
   padding: 0px 15px;
-  margin: 0 15px;
+  margin: 0 auto;
 }
 
 .heading-2 {
@@ -224,6 +224,11 @@ header {
 .line-border {
   height: 2px;
   opacity: 0.2;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #f2f3ff 0,
+    rgba(242, 243, 255, 0) 100%
+  );
 }
 
 .intro {
@@ -792,6 +797,37 @@ header {
       font-style: normal;
       font-weight: 400;
       line-height: 20px; /* 142.857% */
+    }
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  .top-destinations {
+    &__wrapper {
+      padding: 60px 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    &__nav {
+      ul {
+        gap: 20px;
+      }
+    }
+    .btn.btn-trans {
+      padding: 0 10px;
+    }
+  }
+
+  .top-destinations {
+    .top-destinations-item {
+      margin-left: 0;
+
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
     }
   }
 }
