@@ -175,6 +175,8 @@ header {
       text-decoration: none;
       padding: 0 48px;
       margin-top: 32px;
+      font-size: 24px;
+      height: 64px;
     }
   }
 
@@ -183,9 +185,13 @@ header {
     margin-left: auto;
     margin-right: auto;
     position: relative;
-    background: url("../assets/images/slider-bg.png") no-repeat center;
+    background: url("../assets/images/bg-slide-1.png") no-repeat center;
     background-size: cover;
     z-index: 1;
+
+    &:nth-child(2) {
+      background: url("../assets/images/bg-slide-2.jpg") no-repeat center;
+    }
 
     .swiper__wrapper {
       height: 100%;
@@ -908,6 +914,7 @@ header {
 
       h1 {
         font-size: 32px;
+        line-height: normal;
       }
     }
 
@@ -1036,10 +1043,6 @@ header {
   }
 
   .footer-content {
-    .container {
-      padding: 0;
-    }
-
     .contact-row {
       margin-top: 12px;
       flex-direction: column;
