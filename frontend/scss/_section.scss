@@ -471,10 +471,7 @@ header {
         position: relative;
         border-radius: 12px;
         flex-shrink: 0;
-
-        img {
-          object-fit: contain;
-        }
+        overflow: hidden;
 
         .card__content {
           position: absolute;
@@ -811,6 +808,14 @@ header {
   .top-destinations {
     &__wrapper {
       padding: 60px 30px;
+
+      .top-destinations-item {
+        margin-left: 0;
+
+        &:nth-child(odd) {
+          margin-right: 0;
+        }
+      }
     }
   }
 }
@@ -988,11 +993,6 @@ header {
   }
 
   .set-your-foot {
-    .container {
-      padding: 0;
-      margin: 0;
-    }
-
     &__banner {
       .banner-content {
         p {
@@ -1047,6 +1047,102 @@ header {
       margin-top: 12px;
       flex-direction: column;
       gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .traveling-tips {
+    .container {
+      margin: 0;
+    }
+
+    &__intro {
+      h2 {
+        font-size: 32px;
+        font-weight: 700;
+      }
+    }
+
+    &__item {
+      flex-direction: column;
+      gap: 10px !important;
+
+      &--content {
+        h3 {
+          span {
+            font-size: 32px !important;
+          }
+          font-size: 18px;
+        }
+
+        .content--wrap {
+          margin-left: 0 !important;
+          margin-bottom: 20px !important;
+        }
+      }
+    }
+
+    .traveling-tips__item:nth-child(odd) {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .form-section {
+    .container {
+      margin: 0;
+      padding: 0;
+    }
+
+    .form__wrap {
+      background: #03214d;
+      border-radius: 8px;
+
+      h2 {
+        margin-bottom: 0;
+        padding-top: 60px;
+      }
+      .form__content {
+        flex-direction: column;
+        height: auto;
+        background: unset;
+        padding-bottom: 60px;
+
+        &--left {
+          max-width: 100%;
+          margin-top: 10px;
+          padding-left: 15px;
+          .left-item {
+            p {
+              font-size: 18px;
+            }
+          }
+        }
+
+        &--right {
+          width: 100%;
+          padding: 0;
+
+          .right__title {
+            h3 {
+              font-size: 24px;
+            }
+          }
+
+          .right__main-form {
+            padding: 0 15px;
+
+            .main-form__row {
+              flex-direction: column;
+
+              &--item {
+                width: 90%;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -1147,6 +1243,12 @@ header {
           height: 243px;
         }
       }
+
+      .top-destinations-item {
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -1168,49 +1270,36 @@ header {
       }
 
       .time-item {
+        &__card {
+          img {
+            width: 100%;
+          }
+
+          .card__content {
+            h4 {
+              font-size: 24px;
+            }
+            &-temperature {
+              p.temperature {
+                font-size: 48px;
+                padding-right: 16px;
+              }
+
+              p.month {
+                padding-left: 16px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+
         &__content {
           h3 {
             font-size: 18px;
+            font-weight: 700;
           }
         }
       }
-    }
-  }
-
-  .traveling-tips {
-    .container {
-      margin: 0;
-    }
-
-    &__intro {
-      h2 {
-        font-size: 32px;
-        font-weight: 700;
-      }
-    }
-
-    &__item {
-      flex-direction: column;
-      gap: 10px !important;
-
-      &--content {
-        h3 {
-          span {
-            font-size: 32px !important;
-          }
-          font-size: 18px;
-        }
-
-        .content--wrap {
-          margin-left: 0 !important;
-          margin-bottom: 20px !important;
-        }
-      }
-    }
-
-    .traveling-tips__item:nth-child(odd) {
-      flex-direction: column;
-      gap: 10px;
     }
   }
 
