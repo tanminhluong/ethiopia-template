@@ -407,21 +407,13 @@ header {
   &__banner {
     width: 100%;
     border-radius: 8px;
-    // background: linear-gradient(
-    //     0deg,
-    //     rgba(0, 23, 45, 0.3) 0%,
-    //     rgba(0, 23, 45, 0.3) 100%
-    //   ),
-    //   url("../assets/images/set-your-foot-banner.png"),
-    //   lightgray 0px -303.351px / 100% 181.285% no-repeat center;
-    // background-size: cover;
     padding: 111px 0;
     background: linear-gradient(
         0deg,
         rgba(0, 23, 45, 0.3),
         rgba(0, 23, 45, 0.3)
       ),
-      url("../assets/images/set-your-foot-banner.png") no-repeat center;
+      url("../assets/images/banner-set-your-foot.jpg") no-repeat center;
     background-size: cover;
 
     mix-blend-mode: screen;
@@ -695,6 +687,8 @@ header {
 
   h2 {
     text-align: left;
+    font-weight: 700;
+    margin-bottom: 20px;
   }
 
   .enterprise-txt {
@@ -703,6 +697,7 @@ header {
     font-size: 24px;
     font-weight: 400;
     line-height: 32px; /* 133.333% */
+    margin-bottom: 20px;
   }
 
   .contact-row {
@@ -815,6 +810,22 @@ header {
         &:nth-child(odd) {
           margin-right: 0;
         }
+      }
+    }
+  }
+
+  .footer-content {
+    .contact-row {
+      &__phone {
+        flex: 1;
+
+        .phone--number-phone {
+          gap: 50px;
+        }
+      }
+
+      &__address {
+        flex: 1;
       }
     }
   }
@@ -994,6 +1005,8 @@ header {
 
   .set-your-foot {
     &__banner {
+      width: unset;
+      margin: 0 -15px;
       .banner-content {
         p {
           text-align: center;
@@ -1106,7 +1119,7 @@ header {
       .form__content {
         flex-direction: column;
         height: auto;
-        background: unset;
+        background-color: #03214d;
         padding-bottom: 60px;
 
         &--left {
@@ -1193,10 +1206,6 @@ header {
   }
 
   .intro {
-    .container {
-      padding: 0;
-    }
-
     &__wrapper {
       padding-bottom: 80px;
     }
@@ -1271,6 +1280,8 @@ header {
 
       .time-item {
         &__card {
+          width: 100%;
+
           img {
             width: 100%;
           }
@@ -1320,7 +1331,7 @@ header {
       .form__content {
         flex-direction: column;
         height: auto;
-        background: unset;
+        background-color: #03214d;
         padding-bottom: 60px;
 
         &--left {
@@ -1383,6 +1394,7 @@ header {
           }
           a {
             font-size: 16px !important;
+            line-height: 24px;
           }
         }
       }
@@ -1414,6 +1426,18 @@ header {
         font-style: normal;
         font-weight: 400;
         line-height: 20px; /* 142.857% */
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer-content {
+    .contact-row {
+      &__phone {
+        .phone--number-phone {
+          gap: 50px;
+        }
       }
     }
   }
