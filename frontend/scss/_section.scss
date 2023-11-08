@@ -19,7 +19,7 @@ header {
 }
 
 .heading-2 {
-  font-family: Laila;
+  font-family: "Laila";
   font-size: 48px;
   font-weight: 600;
   line-height: 58px; /* 120.833% */
@@ -29,7 +29,7 @@ header {
 
 .txt-content {
   color: #f2f3ff;
-  font-family: Fredoka;
+  font-family: "Fredoka";
   font-size: 18px;
   font-weight: 400;
   line-height: 26px; /* 144.444% */
@@ -75,34 +75,32 @@ header {
     display: none;
   }
 
-  &__nav {
-    ul {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-      list-style-type: none;
+  // &__nav {
+  //   ul {
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: space-between;
+  //     gap: 32px;
+  //     list-style-type: none;
 
-      li {
-        a {
-          text-decoration: none;
-          color: #031f43;
-          font-family: "Fredoka", sans-serif;
-          font-size: 18px;
-          font-weight: 500;
-          line-height: 30px;
-        }
+  //     li {
+  //       a {
+  //         text-decoration: none;
+  //         color: #031f43;
+  //         font-family: "Fredoka", sans-serif;
+  //         font-size: 18px;
+  //         font-weight: 500;
+  //         line-height: 30px;
+  //       }
 
-        a:hover {
-          color: #0f47af;
-        }
-      }
-    }
-  }
+  //       a:hover {
+  //         color: #0f47af;
+  //       }
+  //     }
+  //   }
+  // }
 
   &__nav--mobile {
-    // transform: translateX(0);
-
     ul {
       display: flex;
       align-items: center;
@@ -919,6 +917,15 @@ header {
         }
       }
     }
+
+    .nav__input:checked ~ .nav-overlay {
+      display: block;
+    }
+
+    .nav__input:checked ~ .header__nav--mobile {
+      transform: translateX(0);
+      transition: 0.4s;
+    }
   }
 
   // slider section
@@ -927,7 +934,7 @@ header {
 
     &__content {
       top: 23%;
-
+      padding: 0 15px;
       h1 {
         font-size: 32px;
         line-height: normal;
